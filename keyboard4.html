@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <title>Calculator</title>
+</head>
+<body>
+   <header class="text-center bg-secondary"><h1>Basic Calculator</h1></header>
+
+
+    <form class="container text-center bg-secondary p-2">
+            value 1: <input type="text" id="value1"> <br>
+            operator: 
+            <select id="operator">
+                  <option value="add">Add</option>
+                  <option value="sub">Subtract</option>
+                  <option value="div">Divide</option>
+                  <option value="mul">Multiply</option>
+            </select><br>
+            value 2: <input type="text" id="value2"> 
+            <button type="button" onclick="calc()">Calculate</button>
+    </form>
+
+    <div id="result" class="text-center h2 bg-secondary mt-2"></div>
+   
+   <script>
+function calc() {
+   var a = parseInt(document.querySelector('#value1').value);
+   var b = parseInt(document.querySelector('#value2').value);
+   var op = document.querySelector('#operator').value;
+   var calculate;
+
+
+   if (op == 'add') {
+     calculate = a + b;
+   } else if (op == 'sub') {
+      calculate = a - b;
+   } else if (op == 'div') {
+      calculate = a / b;
+   } else if (op == 'mul') {
+      calculate = a * b;
+   } else if (op == 'mul') {
+      calculate = a * b;
+   }
+
+   document.getElementById('result').innerHTML = calculate;
+}
+
+
+
+      //  function (n){ 
+      //    if(n == 0){
+      //       return factorial()
+      //    }
+      //  }
+
+
+   </script>
+</body>
+</html>
