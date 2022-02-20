@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Cormorant:wght@300&family=Crimson+Pro:ital,wght@0,200;1,200&family=Josefin+Slab:wght@100&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Crimson Pro', 'Josefin Slab', serif;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #323137;
+}
+
+li, a {
+  text-decoration: none;
+  color: black;
+}
+
+.navlinks{
+  list-style: none;
+  display: flex;
+}
+.navlinks li{
+  padding: 0px 30px;
+  text-decoration: none;
+  font-family: 'Crimson Pro', 'Josefin Slab', serif;
+  font-size: 1rem;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.navlinks li a, .footer .social li a{
+  transition: all 0.3s ease 0s;
+}
+
+.navlinks li a:hover{
+   color: orangered;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .cont-img, .aboutcon{
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 5px 5px black
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 1em;
+}
+
+.social ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .social li {
+  list-style: none;
+  text-decoration: none;
+  padding: 0px 1em;
+  font-size: 1rem;
+}
+
+.footer .copy {
+  padding: .7em;
+}
+
+.footer .social li a:hover {
+  color: orangered;
+}
+
+.aboutcon{
+  background: rgba(0,19,52, 0.2);
+  color: white;
+  padding: 30px;
+  margin: 0px auto;
+  box-shadow: 5px 5px black;
+}
+
+.aboutcon h2{
+  display: flex;
+  width: 50%;
+  margin: 0px auto;
+  border-bottom: solid 2px white ;
+  justify-content: center;
+  font-family: 'Cormorant', serif;
+  font-weight: 500;
+  font-size: 4rem;
+}
+.aboutcon h5{
+  display: flex;
+  justify-content: center;
+  font-family: 'Abel', sans-serif;
+  font-weight: normal;
+}
+
+.aboutcon article{
+  padding: 16px;
+  margin-top: 16px;
+  word-spacing: 2px;
+  line-height: normal;
+}
+
+article p{
+  margin-bottom: 2em;
+}
+
+.form{
+  justify-content: space-around;
+}
+
+form .email, form .message, form .name{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: .4em;
+
+}
+
+form .email, form .name{
+  height: 50px;
+}
+form .message{
+  height: 100px;
+}
+
+.email label, .message label, .name label {
+  display: flex ;
+  justify-content: right;
+  margin-right: 1.7em;
+  font-size: 1.2rem;
+}
+
+.email input, .name input, .message textarea{
+  border-radius: 8px;
+  padding-left: 1em;
+  font-size: 1rem;
+  color: black;
+}
+
+.mailbtn{
+  display: flex;
+  justify-content: center;
+  padding: .5em;
+}
+
+button{
+  width: 8em;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: black;
+  color: aliceblue;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  color: black;
+  background-color: orangered ;
+}
+
+article{
+  font-size: 1rem;
+}
+
+.success{
+  display: flex;
+  justify-content: center;
+  color: orangered;
+  font-size: 1rem;
+}
+
+@media (max-width: 950px) {
+  header{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social ul{
+    display: flex;
+  }
+
+  .aboutcon h2{
+    font-size: 3rem;
+  }
+
+  form .email, form .message, form .name{
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .aboutcon h2{
+    font-size: 1.5rem;
+  }
+
+  article{
+    font-size: .9em;
+  }
+
+  .email label, .message label, .name label{
+    margin: 0px;
+  }
+
+  .email input, .name input, .message textarea{
+    width: 70%;
+  }
+}
